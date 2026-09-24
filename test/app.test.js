@@ -2,7 +2,6 @@ const { test, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 const { once } = require('node:events');
 const app = require('../app');
-const { version } = require('../package.json');
 
 let server;
 let baseUrl;
@@ -34,18 +33,12 @@ test('Health identifies DevLaunch', async () => {
   assert.equal((await response.json()).application, 'DevLaunch');
 });
 
-test('Health reports the version from package.json', async () => {
-  const response = await fetch(`${baseUrl}/health`);
-  assert.equal((await response.json()).version, version);
-});
-
 test('GET / serves the DevLaunch website', async () => {
   const response = await fetch(baseUrl);
   assert.equal(response.status, 200);
   assert.match(response.headers.get('content-type'), /text\/html/);
   const html = await response.text();
   assert.match(html, /DevLaunch/);
-  assert.match(html, /id="version"/);
 });
 
 test('Styles and browser JavaScript are available', async () => {

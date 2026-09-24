@@ -9,6 +9,10 @@
     "dev": "node --watch server.js",
     "test": "node --test --test-reporter=spec"
   },
-  "engines": { "node": ">=22" },
-  "dependencies": { "express": "^5.1.0" }
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
