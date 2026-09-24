@@ -1,7 +1,6 @@
 # DevLaunch
 
 A small developer landing page for **GitHub Actions: Build. Test. Deploy.**
-The initial application is **Version 1.0**.
 
 ## Stack and requirements
 
@@ -39,14 +38,9 @@ They verify the health response, root page, and frontend assets.
 ```json
 {
   "status": "UP",
-  "application": "DevLaunch",
-  "version": "1.0.0"
+  "application": "DevLaunch"
 }
 ```
-
-`package.json` is the single source for the application version. The page reads
-`/health` and displays the major/minor version, such as **Version 1.0**.
-After a version edit, run `npm install --package-lock-only` to synchronize the lockfile.
 
 ## Project structure
 
@@ -59,9 +53,9 @@ DevLaunch/
 ├── .gitignore
 ├── README.md
 ├── public/
-│   ├── index.html
+│   ├── index.html      # Landing page (edit tagline for live demo)
 │   ├── styles.css
-│   └── script.js       # Repository link and version display
+│   └── script.js       # Repository link configuration
 └── test/
     └── app.test.js
 ```
@@ -72,21 +66,22 @@ This repository is intentionally prepared for a GitHub Actions + Microsoft Azure
 CI/CD demonstration: local application → GitHub → Actions → build → test →
 Azure App Service → live website.
 
-No workflow is included. Configure Azure App Service manually and connect the
-repository through Azure Deployment Center to generate the initial workflow.
-Ensure the generated workflow runs `npm test` before deployment; workflow
-generation alone does not guarantee that tests run.
+**Live demo flow:**
 
-There is no compilation step for this app. Installing dependencies with `npm ci`
-prepares it for delivery; no artificial build script is needed. Use a supported
-Node.js runtime matching your local environment (22 or newer) and `npm start`.
+1. Deploy the application to Azure App Service.
+2. Open `public/index.html` and change the hero tagline.
+3. Commit and push to `main`.
+4. Watch GitHub Actions automatically build, test, and deploy.
+5. Verify the updated text on the live website.
+
+The tagline to change is on **line 33** of `public/index.html`:
+
+```html
+<p class="tagline">Ship code faster with automation.</p>
+```
+
+No workflow is included initially. Configure Azure App Service manually and
+connect the repository through Azure Deployment Center to generate the workflow.
+
 The server listens on `process.env.PORT || 3000` and serves files relative to the
 project directory. No database, secrets, or infrastructure scripts are required.
-
-The LIVE, Production, Azure, Passing, and terminal labels are illustrative demo
-content, not live GitHub or Azure telemetry. `/health` reports only application
-availability and version.
-
-Before pushing, set `repositoryUrl` in `public/script.js` to your GitHub repository
-URL. Until then, the GitHub links scroll to the pipeline section. Commit the
-lockfile; keep `node_modules` and environment files out of Git.

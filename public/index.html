@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DevLaunch — a simple journey from commit to cloud with GitHub Actions and Microsoft Azure.">
+  <meta name="description"
+    content="DevLaunch — a simple journey from commit to cloud with GitHub Actions and Microsoft Azure.">
   <title>DevLaunch — Build. Test. Deploy.</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ctext x='7' y='43' font-size='36' fill='%233fb950'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ctext x='7' y='43' font-size='36' fill='%233fb950'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/styles.css">
   <script src="/script.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="nav container">
-    <a class="brand" href="#" aria-label="DevLaunch home"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> DevLaunch</a>
+    <a class="brand" href="#" aria-label="DevLaunch home"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>
+      DevLaunch</a>
     <nav aria-label="Main navigation">
       <a href="#github" data-repository>GitHub <span aria-hidden="true">↗</span></a>
       <a href="#about">About</a>
@@ -33,25 +38,47 @@
         </div>
       </div>
       <div class="terminal" aria-label="Illustrative delivery pipeline">
-        <div class="terminal-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>devlaunch / main</span><span aria-hidden="true">⌘</span></div>
+        <div class="terminal-bar"><span class="window-dots"
+            aria-hidden="true"><i></i><i></i><i></i></span><span>devlaunch / main</span><span
+            aria-hidden="true">⌘</span></div>
         <div class="terminal-body">
           <p class="terminal-comment">// small commits. big possibilities.</p>
           <p><span class="green">❯</span> git push origin main</p>
           <div class="terminal-steps">
-            <div><span class="step-check">✓</span><span>Build application<small>Dependencies ready.</small></span><span class="step-result">done</span></div>
-            <div><span class="step-check">✓</span><span>Run tests<small>Every change, validated.</small></span><span class="step-result">done</span></div>
-            <div><span class="step-check">✓</span><span>Deploy to Azure<small>Your code. Now live.</small></span><span class="step-result">done</span></div>
+            <div><span class="step-check">✓</span><span>Build application<small>Dependencies ready.</small></span><span
+                class="step-result">done</span></div>
+            <div><span class="step-check">✓</span><span>Run tests<small>Every change, validated.</small></span><span
+                class="step-result">done</span></div>
+            <div><span class="step-check">✓</span><span>Deploy to Azure<small>Your code. Now live.</small></span><span
+                class="step-result">done</span></div>
           </div>
-          <div class="terminal-success"><span class="dot" aria-hidden="true"></span> Ready for the world. <span aria-hidden="true">↗</span></div>
+          <div class="terminal-success"><span class="dot" aria-hidden="true"></span> Ready for the world. <span
+              aria-hidden="true">↗</span></div>
           <p class="terminal-caption">An illustration of your automated workflow</p>
         </div>
       </div>
     </section>
 
     <section id="about" class="principles" aria-label="Build, test, and deploy">
-      <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">&lt;/&gt;</span><span class="number">01</span></div><h2>BUILD</h2><p>Prepare the application and its dependencies for delivery.</p><span class="card-foot">Start with your code <span aria-hidden="true">↗</span></span></article>
-      <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">✓</span><span class="number">02</span></div><h2>TEST</h2><p>Validate every change before it reaches production.</p><span class="card-foot">Ship with confidence <span aria-hidden="true">↗</span></span></article>
-      <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">↑</span><span class="number">03</span></div><h2>DEPLOY</h2><p>Ship validated changes automatically to the cloud.</p><span class="card-foot">Make it live <span aria-hidden="true">↗</span></span></article>
+      <article class="card">
+        <div class="card-top"><span class="card-icon" aria-hidden="true">&lt;/&gt;</span><span class="number">01</span>
+        </div>
+        <h2>BUILD</h2>
+        <p>Prepare the application and its dependencies for delivery.</p><span class="card-foot">Start with your code
+          <span aria-hidden="true">↗</span></span>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="card-icon" aria-hidden="true">✓</span><span class="number">02</span></div>
+        <h2>TEST</h2>
+        <p>Validate every change before it reaches production.</p><span class="card-foot">Ship with confidence <span
+            aria-hidden="true">↗</span></span>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="card-icon" aria-hidden="true">↑</span><span class="number">03</span></div>
+        <h2>DEPLOY</h2>
+        <p>Ship validated changes automatically to the cloud.</p><span class="card-foot">Make it live <span
+            aria-hidden="true">↗</span></span>
+      </article>
     </section>
 
     <section id="demo" class="demo-grid">
@@ -60,20 +87,43 @@
         <h2>FROM COMMIT TO CLOUD</h2>
         <p>Every push can trigger an automated path from source code to a live application.</p>
         <ol class="pipeline-track" aria-label="GitHub to Actions to Azure">
-          <li><span class="pipeline-symbol" aria-hidden="true">&lt;/&gt;</span><strong>GitHub</strong><small>Push your code</small></li>
+          <li><span class="pipeline-symbol" aria-hidden="true">&lt;/&gt;</span><strong>GitHub</strong><small>Push your
+              code</small></li>
           <li class="arrow" aria-hidden="true">→</li>
-          <li><span class="pipeline-symbol" aria-hidden="true">▷</span><strong>Actions</strong><small>Build &amp; test</small></li>
+          <li><span class="pipeline-symbol" aria-hidden="true">▷</span><strong>Actions</strong><small>Build &amp;
+              test</small></li>
           <li class="arrow" aria-hidden="true">→</li>
-          <li><span class="pipeline-symbol azure-symbol" aria-hidden="true">△</span><strong>Azure</strong><small>Go live</small></li>
+          <li><span class="pipeline-symbol azure-symbol" aria-hidden="true">△</span><strong>Azure</strong><small>Go
+              live</small></li>
         </ol>
       </div>
       <aside id="deployment" class="deployment" aria-labelledby="deployment-title">
-        <div class="deployment-heading"><h2 id="deployment-title">DEPLOYMENT</h2><span class="status"><span class="dot" aria-hidden="true"></span> LIVE</span></div>
-        <dl><div><dt>Environment</dt><dd>Production</dd></div><div><dt>Platform</dt><dd>Microsoft Azure</dd></div><div><dt>Version</dt><dd class="version" id="version" aria-live="polite">Loading…</dd></div><div><dt>Build</dt><dd class="green">Passing ✓</dd></div></dl>
+        <div class="deployment-heading">
+          <h2 id="deployment-title">DEPLOYMENT</h2><span class="status"><span class="dot" aria-hidden="true"></span>
+            LIVE</span>
+        </div>
+        <dl>
+          <div>
+            <dt>Environment</dt>
+            <dd>Production</dd>
+          </div>
+          <div>
+            <dt>Platform</dt>
+            <dd>Microsoft Azure</dd>
+          </div>
+
+          <div>
+            <dt>Build</dt>
+            <dd class="green">Passing ✓</dd>
+          </div>
+        </dl>
         <p class="status-note">Demo status · Azure deployment configured separately.</p>
       </aside>
     </section>
   </main>
-  <footer class="container"><span class="brand footer-brand"><span class="green" aria-hidden="true">&lt;/&gt;</span> DevLaunch</span><span>From your first commit to your next big idea.</span><a href="/health">Health endpoint <span aria-hidden="true">↗</span></a></footer>
+  <footer class="container"><span class="brand footer-brand"><span class="green" aria-hidden="true">&lt;/&gt;</span>
+      DevLaunch</span><span>From your first commit to your next big idea.</span><a href="/health">Health endpoint <span
+        aria-hidden="true">↗</span></a></footer>
 </body>
+
 </html>
